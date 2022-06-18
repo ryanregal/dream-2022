@@ -1,0 +1,12 @@
+USE `db3.4`;
+/*为三建工程建立一个供应情况的视图*/
+CREATE VIEW V_SPJ AS
+SELECT SNO,PNO,QTY FROM SPJ
+WHERE JNO=(SELECT JNO FROM J WHERE JNAME='三建'); 
+
+/*对该视图查询*/
+/*找出三建工程项目使用的各种零件代码及其数量*/
+SELECT PNO,QTY FROM V_SPJ;
+/*对该视图查询*/
+SELECT PNO,QTY FROM V_SPJ
+WHERE SNO='S1';
