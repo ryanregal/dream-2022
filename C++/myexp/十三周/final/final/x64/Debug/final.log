@@ -1,0 +1,4 @@
+﻿  源.cpp
+D:\XPfile\学习资料\年级分类\大二下\C++\myexp\十三周\final\final\源.cpp(6,11): warning C4101: “row”: 未引用的局部变量
+D:\XPfile\学习资料\年级分类\大二下\C++\myexp\十三周\final\final\源.cpp(6,6): warning C4101: “col”: 未引用的局部变量
+  final.vcxproj -> D:\XPfile\学习资料\年级分类\大二下\C++\myexp\十三周\final\x64\Debug\final.exe
