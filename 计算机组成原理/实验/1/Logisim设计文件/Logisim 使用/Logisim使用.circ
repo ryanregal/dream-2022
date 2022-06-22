@@ -1,0 +1,588 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project source="2.16.1.0.exe" version="1.0">
+  This file is intended to be loaded by Logisim http://logisim.altervista.org
+
+  <lib desc="#Wiring" name="0"/>
+  <lib desc="#Gates" name="1"/>
+  <lib desc="#TTL" name="2"/>
+  <lib desc="#Plexers" name="3">
+    <tool name="Multiplexer">
+      <a name="enable" val="false"/>
+    </tool>
+    <tool name="Demultiplexer">
+      <a name="enable" val="false"/>
+    </tool>
+    <tool name="Decoder">
+      <a name="enable" val="false"/>
+    </tool>
+  </lib>
+  <lib desc="#Arithmetic" name="4"/>
+  <lib desc="#Memory" name="5">
+    <tool name="ROM">
+      <a name="contents">addr/data: 8 8
+0
+</a>
+    </tool>
+  </lib>
+  <lib desc="#I/O" name="6"/>
+  <lib desc="#Base" name="7">
+    <tool name="Text Tool">
+      <a name="text" val=""/>
+      <a name="font" val="Dialog plain 12"/>
+      <a name="color" val="#000000"/>
+      <a name="halign" val="center"/>
+      <a name="valign" val="base"/>
+    </tool>
+  </lib>
+  <main name="门电路"/>
+  <options>
+    <a name="gateUndefined" val="ignore"/>
+    <a name="simlimit" val="1000"/>
+    <a name="simrand" val="0"/>
+  </options>
+  <mappings>
+    <tool lib="7" map="Button2" name="Poke Tool"/>
+    <tool lib="7" map="Button3" name="Menu Tool"/>
+    <tool lib="7" map="Ctrl Button1" name="Menu Tool"/>
+  </mappings>
+  <toolbar>
+    <tool lib="7" name="Poke Tool"/>
+    <tool lib="7" name="Edit Tool"/>
+    <sep/>
+    <tool lib="7" name="Text Tool">
+      <a name="text" val=""/>
+      <a name="font" val="Dialog plain 12"/>
+      <a name="color" val="#000000"/>
+      <a name="halign" val="center"/>
+      <a name="valign" val="base"/>
+    </tool>
+    <tool lib="0" name="Pin">
+      <a name="tristate" val="false"/>
+    </tool>
+    <tool lib="0" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+    </tool>
+    <tool lib="1" name="NOT Gate"/>
+    <tool lib="1" name="AND Gate"/>
+    <tool lib="1" name="OR Gate"/>
+  </toolbar>
+  <circuit name="门电路">
+    <a name="circuit" val="门电路"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="Dialog plain 12"/>
+    <a name="clabelcolor" val="#000000"/>
+    <wire from="(330,190)" to="(330,200)"/>
+    <wire from="(330,110)" to="(330,120)"/>
+    <wire from="(330,290)" to="(330,300)"/>
+    <wire from="(380,100)" to="(410,100)"/>
+    <wire from="(380,180)" to="(410,180)"/>
+    <wire from="(360,240)" to="(390,240)"/>
+    <wire from="(310,80)" to="(330,80)"/>
+    <wire from="(310,120)" to="(330,120)"/>
+    <wire from="(310,160)" to="(330,160)"/>
+    <wire from="(310,200)" to="(330,200)"/>
+    <wire from="(330,300)" to="(350,300)"/>
+    <wire from="(330,320)" to="(350,320)"/>
+    <wire from="(330,80)" to="(330,90)"/>
+    <wire from="(330,160)" to="(330,170)"/>
+    <wire from="(330,320)" to="(330,330)"/>
+    <wire from="(390,310)" to="(430,310)"/>
+    <wire from="(310,240)" to="(340,240)"/>
+    <wire from="(310,290)" to="(330,290)"/>
+    <wire from="(310,330)" to="(330,330)"/>
+    <wire from="(330,90)" to="(350,90)"/>
+    <wire from="(330,110)" to="(350,110)"/>
+    <wire from="(330,190)" to="(350,190)"/>
+    <wire from="(330,170)" to="(350,170)"/>
+    <wire from="(380,310)" to="(390,310)"/>
+    <wire from="(640,80)" to="(640,90)"/>
+    <wire from="(640,160)" to="(640,170)"/>
+    <wire from="(640,240)" to="(640,250)"/>
+    <wire from="(640,190)" to="(640,200)"/>
+    <wire from="(640,110)" to="(640,120)"/>
+    <wire from="(640,270)" to="(640,280)"/>
+    <wire from="(700,100)" to="(740,100)"/>
+    <wire from="(700,180)" to="(740,180)"/>
+    <wire from="(620,200)" to="(640,200)"/>
+    <wire from="(620,120)" to="(640,120)"/>
+    <wire from="(620,80)" to="(640,80)"/>
+    <wire from="(620,160)" to="(640,160)"/>
+    <wire from="(620,240)" to="(640,240)"/>
+    <wire from="(620,280)" to="(640,280)"/>
+    <wire from="(640,90)" to="(660,90)"/>
+    <wire from="(640,110)" to="(660,110)"/>
+    <wire from="(640,170)" to="(660,170)"/>
+    <wire from="(640,190)" to="(660,190)"/>
+    <wire from="(640,250)" to="(660,250)"/>
+    <wire from="(640,270)" to="(660,270)"/>
+    <wire from="(690,260)" to="(710,260)"/>
+    <wire from="(710,260)" to="(740,260)"/>
+    <wire from="(690,100)" to="(700,100)"/>
+    <wire from="(690,180)" to="(700,180)"/>
+    <comp lib="7" loc="(217,79)" name="Text">
+      <a name="text" val="2. 门电路(1:与门)"/>
+    </comp>
+    <comp lib="0" loc="(310,290)" name="Pin">
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="1" loc="(700,100)" name="NOR Gate"/>
+    <comp lib="0" loc="(740,100)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="1" loc="(380,100)" name="AND Gate"/>
+    <comp lib="1" loc="(390,310)" name="NAND Gate"/>
+    <comp lib="0" loc="(620,200)" name="Pin">
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(310,240)" name="Pin">
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="7" loc="(225,299)" name="Text">
+      <a name="text" val="2. 门电路(4:与非门)"/>
+    </comp>
+    <comp lib="0" loc="(310,330)" name="Pin">
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="7" loc="(534,161)" name="Text">
+      <a name="text" val="2. 门电路(6:异或门)"/>
+    </comp>
+    <comp lib="0" loc="(390,240)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="1" loc="(710,260)" name="XNOR Gate"/>
+    <comp lib="0" loc="(620,80)" name="Pin">
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="7" loc="(217,161)" name="Text">
+      <a name="text" val="2. 门电路(2:或门)"/>
+    </comp>
+    <comp lib="0" loc="(410,180)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="7" loc="(218,242)" name="Text">
+      <a name="text" val="2. 门电路(3:非门)"/>
+    </comp>
+    <comp lib="0" loc="(310,80)" name="Pin">
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(740,260)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(410,100)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="1" loc="(360,240)" name="NOT Gate"/>
+    <comp lib="0" loc="(310,160)" name="Pin">
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(740,180)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(430,310)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(620,120)" name="Pin">
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="7" loc="(534,83)" name="Text">
+      <a name="text" val="2. 门电路(5:或非门)"/>
+    </comp>
+    <comp lib="0" loc="(620,160)" name="Pin">
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="1" loc="(380,180)" name="OR Gate"/>
+    <comp lib="7" loc="(535,243)" name="Text">
+      <a name="text" val="2. 门电路(7:同或门)"/>
+    </comp>
+    <comp lib="0" loc="(620,240)" name="Pin">
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(310,120)" name="Pin">
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(620,280)" name="Pin">
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(310,200)" name="Pin">
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="1" loc="(700,180)" name="XOR Gate"/>
+  </circuit>
+  <circuit name="隧道">
+    <a name="circuit" val="隧道"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="Dialog plain 12"/>
+    <a name="clabelcolor" val="#000000"/>
+    <wire from="(350,250)" to="(380,250)"/>
+    <wire from="(280,230)" to="(300,230)"/>
+    <wire from="(280,270)" to="(300,270)"/>
+    <wire from="(300,240)" to="(320,240)"/>
+    <wire from="(300,260)" to="(320,260)"/>
+    <wire from="(280,180)" to="(330,180)"/>
+    <wire from="(300,260)" to="(300,270)"/>
+    <wire from="(300,230)" to="(300,240)"/>
+    <wire from="(290,140)" to="(330,140)"/>
+    <wire from="(400,140)" to="(440,140)"/>
+    <comp lib="0" loc="(280,270)" name="Tunnel">
+      <a name="label" val="B"/>
+    </comp>
+    <comp lib="1" loc="(350,250)" name="AND Gate"/>
+    <comp lib="0" loc="(280,230)" name="Tunnel">
+      <a name="label" val="A"/>
+    </comp>
+    <comp lib="0" loc="(400,140)" name="Pin">
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(290,140)" name="Pin">
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(440,140)" name="Tunnel">
+      <a name="facing" val="west"/>
+      <a name="label" val="B"/>
+    </comp>
+    <comp lib="0" loc="(280,180)" name="Tunnel">
+      <a name="label" val="Y"/>
+    </comp>
+    <comp lib="7" loc="(222,139)" name="Text">
+      <a name="text" val="3. 隧道"/>
+    </comp>
+    <comp lib="0" loc="(330,180)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(330,140)" name="Tunnel">
+      <a name="facing" val="west"/>
+      <a name="label" val="A"/>
+    </comp>
+    <comp lib="0" loc="(380,250)" name="Tunnel">
+      <a name="facing" val="west"/>
+      <a name="label" val="Y"/>
+    </comp>
+  </circuit>
+  <circuit name="探针">
+    <a name="circuit" val="探针"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="Dialog plain 12"/>
+    <a name="clabelcolor" val="#000000"/>
+    <wire from="(490,280)" to="(520,280)"/>
+    <wire from="(410,260)" to="(430,260)"/>
+    <wire from="(410,300)" to="(430,300)"/>
+    <wire from="(430,290)" to="(450,290)"/>
+    <wire from="(430,270)" to="(450,270)"/>
+    <wire from="(430,290)" to="(430,300)"/>
+    <wire from="(430,260)" to="(430,270)"/>
+    <wire from="(450,230)" to="(450,270)"/>
+    <wire from="(480,280)" to="(490,280)"/>
+    <wire from="(520,280)" to="(520,340)"/>
+    <wire from="(450,290)" to="(450,340)"/>
+    <wire from="(520,280)" to="(530,280)"/>
+    <comp lib="1" loc="(490,280)" name="XOR Gate"/>
+    <comp lib="7" loc="(343,232)" name="Text">
+      <a name="text" val="4. 探针"/>
+    </comp>
+    <comp lib="0" loc="(530,280)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(410,300)" name="Pin">
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(410,260)" name="Pin">
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(450,230)" name="Probe"/>
+    <comp lib="0" loc="(520,340)" name="Probe"/>
+    <comp lib="0" loc="(450,340)" name="Probe"/>
+  </circuit>
+  <circuit name="常量">
+    <a name="circuit" val="常量"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="Dialog plain 12"/>
+    <a name="clabelcolor" val="#000000"/>
+    <wire from="(590,350)" to="(590,360)"/>
+    <wire from="(590,380)" to="(590,390)"/>
+    <wire from="(570,350)" to="(590,350)"/>
+    <wire from="(570,390)" to="(590,390)"/>
+    <wire from="(590,380)" to="(610,380)"/>
+    <wire from="(640,370)" to="(670,370)"/>
+    <wire from="(590,360)" to="(610,360)"/>
+    <comp lib="1" loc="(640,370)" name="AND Gate"/>
+    <comp lib="7" loc="(506,351)" name="Text">
+      <a name="text" val="5. 常量"/>
+    </comp>
+    <comp lib="0" loc="(670,370)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(570,390)" name="Constant"/>
+    <comp lib="0" loc="(570,350)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+  </circuit>
+  <circuit name="多位情况">
+    <a name="circuit" val="多位情况"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="Dialog plain 12"/>
+    <a name="clabelcolor" val="#000000"/>
+    <wire from="(630,510)" to="(630,520)"/>
+    <wire from="(690,500)" to="(720,500)"/>
+    <wire from="(720,500)" to="(720,570)"/>
+    <wire from="(590,520)" to="(630,520)"/>
+    <wire from="(590,470)" to="(630,470)"/>
+    <wire from="(640,510)" to="(640,570)"/>
+    <wire from="(640,440)" to="(640,490)"/>
+    <wire from="(680,500)" to="(690,500)"/>
+    <wire from="(630,470)" to="(630,490)"/>
+    <wire from="(720,500)" to="(730,500)"/>
+    <wire from="(630,510)" to="(640,510)"/>
+    <wire from="(630,490)" to="(640,490)"/>
+    <wire from="(640,490)" to="(650,490)"/>
+    <wire from="(640,510)" to="(650,510)"/>
+    <comp lib="0" loc="(640,570)" name="Probe">
+      <a name="radix" val="10unsigned"/>
+    </comp>
+    <comp lib="0" loc="(640,440)" name="Probe">
+      <a name="radix" val="10unsigned"/>
+    </comp>
+    <comp lib="7" loc="(518,433)" name="Text">
+      <a name="text" val="6. 多位情况"/>
+    </comp>
+    <comp lib="0" loc="(590,470)" name="Pin">
+      <a name="width" val="8"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="A"/>
+    </comp>
+    <comp lib="0" loc="(720,570)" name="Probe">
+      <a name="radix" val="10unsigned"/>
+    </comp>
+    <comp lib="1" loc="(690,500)" name="XOR Gate">
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(590,520)" name="Pin">
+      <a name="width" val="8"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="B"/>
+    </comp>
+    <comp lib="0" loc="(730,500)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="8"/>
+      <a name="label" val="Y"/>
+    </comp>
+  </circuit>
+  <circuit name="分线器">
+    <a name="circuit" val="分线器"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="Dialog plain 12"/>
+    <a name="clabelcolor" val="#000000"/>
+    <wire from="(830,230)" to="(880,230)"/>
+    <wire from="(830,240)" to="(880,240)"/>
+    <wire from="(900,40)" to="(950,40)"/>
+    <wire from="(880,260)" to="(880,290)"/>
+    <wire from="(860,290)" to="(860,320)"/>
+    <wire from="(840,80)" to="(880,80)"/>
+    <wire from="(910,130)" to="(950,130)"/>
+    <wire from="(900,220)" to="(940,220)"/>
+    <wire from="(830,240)" to="(830,260)"/>
+    <wire from="(930,50)" to="(930,70)"/>
+    <wire from="(830,290)" to="(850,290)"/>
+    <wire from="(860,290)" to="(880,290)"/>
+    <wire from="(900,60)" to="(920,60)"/>
+    <wire from="(930,70)" to="(950,70)"/>
+    <wire from="(850,250)" to="(850,290)"/>
+    <wire from="(920,60)" to="(920,100)"/>
+    <wire from="(830,320)" to="(860,320)"/>
+    <wire from="(920,100)" to="(950,100)"/>
+    <wire from="(850,250)" to="(880,250)"/>
+    <wire from="(900,50)" to="(930,50)"/>
+    <wire from="(910,70)" to="(910,130)"/>
+    <wire from="(900,70)" to="(910,70)"/>
+    <wire from="(1160,60)" to="(1180,60)"/>
+    <wire from="(1160,100)" to="(1180,100)"/>
+    <wire from="(1160,70)" to="(1160,100)"/>
+    <comp lib="0" loc="(950,40)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(1180,60)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(1140,80)" name="Splitter">
+      <a name="fanout" val="2"/>
+      <a name="incoming" val="8"/>
+      <a name="bit1" val="0"/>
+      <a name="bit2" val="0"/>
+      <a name="bit3" val="0"/>
+      <a name="bit4" val="1"/>
+      <a name="bit5" val="1"/>
+      <a name="bit6" val="1"/>
+      <a name="bit7" val="1"/>
+    </comp>
+    <comp lib="7" loc="(826,33)" name="Text">
+      <a name="text" val="7. 分线器（输入）"/>
+    </comp>
+    <comp lib="0" loc="(1180,100)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(900,220)" name="Splitter">
+      <a name="facing" val="west"/>
+    </comp>
+    <comp lib="0" loc="(830,290)" name="Pin">
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(880,80)" name="Splitter"/>
+    <comp lib="0" loc="(830,320)" name="Pin">
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(1140,80)" name="Pin">
+      <a name="width" val="8"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(840,80)" name="Pin">
+      <a name="width" val="4"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(950,70)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(830,260)" name="Pin">
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(940,220)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="7" loc="(1082,36)" name="Text">
+      <a name="text" val="7. 分线器（拼接）"/>
+    </comp>
+    <comp lib="0" loc="(950,100)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(830,230)" name="Pin">
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="7" loc="(829,174)" name="Text">
+      <a name="text" val="7. 分线器（输出）"/>
+    </comp>
+    <comp lib="0" loc="(950,130)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+    </comp>
+  </circuit>
+  <circuit name="输入输出">
+    <a name="circuit" val="输入输出"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="Dialog plain 12"/>
+    <a name="clabelcolor" val="#000000"/>
+    <comp lib="0" loc="(310,30)" name="Pin">
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(340,30)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="7" loc="(233,34)" name="Text">
+      <a name="text" val="1. 输入输出"/>
+    </comp>
+  </circuit>
+  <circuit name="电路封装">
+    <a name="circuit" val="电路封装"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="Dialog plain 12"/>
+    <a name="clabelcolor" val="#000000"/>
+    <wire from="(190,110)" to="(190,120)"/>
+    <wire from="(160,90)" to="(160,100)"/>
+    <wire from="(110,120)" to="(110,130)"/>
+    <wire from="(140,120)" to="(190,120)"/>
+    <wire from="(260,150)" to="(260,180)"/>
+    <wire from="(220,100)" to="(260,100)"/>
+    <wire from="(220,180)" to="(260,180)"/>
+    <wire from="(260,100)" to="(260,130)"/>
+    <wire from="(160,90)" to="(190,90)"/>
+    <wire from="(160,170)" to="(190,170)"/>
+    <wire from="(110,120)" to="(140,120)"/>
+    <wire from="(50,100)" to="(140,100)"/>
+    <wire from="(310,140)" to="(340,140)"/>
+    <wire from="(260,130)" to="(280,130)"/>
+    <wire from="(260,150)" to="(280,150)"/>
+    <wire from="(140,120)" to="(140,170)"/>
+    <wire from="(50,190)" to="(190,190)"/>
+    <wire from="(100,130)" to="(110,130)"/>
+    <wire from="(50,100)" to="(50,170)"/>
+    <wire from="(50,170)" to="(70,170)"/>
+    <wire from="(50,170)" to="(50,190)"/>
+    <comp lib="7" loc="(79,63)" name="Text">
+      <a name="text" val="8、电路封装"/>
+    </comp>
+    <comp lib="1" loc="(160,170)" name="NOT Gate"/>
+    <comp lib="1" loc="(220,180)" name="AND Gate"/>
+    <comp lib="1" loc="(310,140)" name="OR Gate"/>
+    <comp lib="0" loc="(70,170)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="B"/>
+    </comp>
+    <comp lib="1" loc="(160,100)" name="NOT Gate"/>
+    <comp lib="0" loc="(340,140)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="Y"/>
+    </comp>
+    <comp lib="1" loc="(220,100)" name="AND Gate"/>
+    <comp lib="7" loc="(143,238)" name="Text">
+      <a name="text" val="Y=A异或B=A与/B+/A与B"/>
+    </comp>
+    <comp lib="0" loc="(100,130)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="A"/>
+    </comp>
+  </circuit>
+  <circuit name="电路封装应用">
+    <a name="circuit" val="电路封装应用"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="Dialog plain 12"/>
+    <a name="clabelcolor" val="#000000"/>
+    <wire from="(160,100)" to="(190,100)"/>
+    <wire from="(160,140)" to="(220,140)"/>
+    <wire from="(220,110)" to="(220,140)"/>
+    <wire from="(220,100)" to="(260,100)"/>
+    <comp lib="0" loc="(260,100)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(160,100)" name="Pin">
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp loc="(220,100)" name="电路封装"/>
+    <comp lib="0" loc="(160,140)" name="Pin">
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="7" loc="(168,66)" name="Text">
+      <a name="text" val="9、电路封装的应用"/>
+    </comp>
+  </circuit>
+</project>

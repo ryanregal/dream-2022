@@ -1,0 +1,809 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project source="2.16.1.0.exe" version="1.0">
+  This file is intended to be loaded by Logisim http://logisim.altervista.org
+
+  <lib desc="#Wiring" name="0">
+    <tool name="Splitter">
+      <a name="facing" val="south"/>
+    </tool>
+    <tool name="Pin">
+      <a name="facing" val="north"/>
+      <a name="labelfont" val="Dialog plain 12"/>
+    </tool>
+    <tool name="Probe">
+      <a name="facing" val="west"/>
+      <a name="radix" val="10signed"/>
+      <a name="labelfont" val="Dialog plain 12"/>
+    </tool>
+    <tool name="Tunnel">
+      <a name="width" val="32"/>
+      <a name="labelfont" val="Dialog plain 12"/>
+    </tool>
+    <tool name="Pull Resistor">
+      <a name="facing" val="north"/>
+    </tool>
+    <tool name="Clock">
+      <a name="facing" val="north"/>
+      <a name="labelfont" val="Dialog plain 12"/>
+    </tool>
+    <tool name="ProgrammableGenerator">
+      <a name="labelfont" val="Dialog plain 12"/>
+    </tool>
+    <tool name="Constant">
+      <a name="value" val="0x0"/>
+    </tool>
+  </lib>
+  <lib desc="#Gates" name="1">
+    <tool name="Buffer">
+      <a name="width" val="3"/>
+    </tool>
+    <tool name="AND Gate">
+      <a name="facing" val="west"/>
+    </tool>
+    <tool name="Odd Parity">
+      <a name="facing" val="south"/>
+      <a name="inputs" val="3"/>
+    </tool>
+    <tool name="Controlled Buffer">
+      <a name="facing" val="north"/>
+    </tool>
+  </lib>
+  <lib desc="#TTL" name="2"/>
+  <lib desc="#Plexers" name="3">
+    <tool name="Multiplexer">
+      <a name="facing" val="north"/>
+      <a name="width" val="32"/>
+      <a name="enable" val="false"/>
+    </tool>
+    <tool name="Demultiplexer">
+      <a name="select" val="5"/>
+      <a name="enable" val="false"/>
+    </tool>
+    <tool name="Decoder">
+      <a name="enable" val="false"/>
+    </tool>
+  </lib>
+  <lib desc="#Arithmetic" name="4">
+    <tool name="Subtractor">
+      <a name="width" val="16"/>
+    </tool>
+    <tool name="Multiplier">
+      <a name="width" val="1"/>
+    </tool>
+    <tool name="Divider">
+      <a name="width" val="16"/>
+    </tool>
+    <tool name="Negator">
+      <a name="width" val="1"/>
+    </tool>
+    <tool name="Comparator">
+      <a name="width" val="16"/>
+    </tool>
+  </lib>
+  <lib desc="#Memory" name="5">
+    <tool name="Register">
+      <a name="width" val="32"/>
+    </tool>
+    <tool name="ROM">
+      <a name="contents">addr/data: 8 8
+0
+</a>
+    </tool>
+  </lib>
+  <lib desc="#I/O" name="6"/>
+  <lib desc="#Base" name="7">
+    <tool name="Text Tool">
+      <a name="text" val=""/>
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="color" val="#000000"/>
+      <a name="halign" val="center"/>
+      <a name="valign" val="base"/>
+    </tool>
+  </lib>
+  <main name="8位奇校验编码电路"/>
+  <options>
+    <a name="gateUndefined" val="ignore"/>
+    <a name="simlimit" val="1000"/>
+    <a name="simrand" val="0"/>
+  </options>
+  <mappings>
+    <tool lib="7" map="Button2" name="Poke Tool"/>
+    <tool lib="7" map="Button3" name="Menu Tool"/>
+    <tool lib="7" map="Ctrl Button1" name="Menu Tool"/>
+  </mappings>
+  <toolbar>
+    <tool lib="7" name="Poke Tool"/>
+    <tool lib="7" name="Edit Tool"/>
+    <sep/>
+    <tool lib="7" name="Text Tool">
+      <a name="text" val=""/>
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="color" val="#000000"/>
+      <a name="halign" val="center"/>
+      <a name="valign" val="base"/>
+    </tool>
+    <tool lib="0" name="Pin">
+      <a name="tristate" val="false"/>
+    </tool>
+    <tool lib="0" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+    </tool>
+    <tool lib="1" name="NOT Gate"/>
+    <tool lib="1" name="AND Gate"/>
+    <tool lib="1" name="OR Gate"/>
+  </toolbar>
+  <circuit name="8位奇校验编码电路">
+    <a name="circuit" val="8位奇校验编码电路"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="Dialog plain 12"/>
+    <a name="clabelcolor" val="#000000"/>
+    <wire from="(20,150)" to="(720,150)"/>
+    <wire from="(190,310)" to="(240,310)"/>
+    <wire from="(290,370)" to="(290,380)"/>
+    <wire from="(140,380)" to="(240,380)"/>
+    <wire from="(290,280)" to="(310,280)"/>
+    <wire from="(290,400)" to="(310,400)"/>
+    <wire from="(510,20)" to="(720,20)"/>
+    <wire from="(510,140)" to="(720,140)"/>
+    <wire from="(430,340)" to="(450,340)"/>
+    <wire from="(280,320)" to="(290,320)"/>
+    <wire from="(350,390)" to="(360,390)"/>
+    <wire from="(510,20)" to="(510,140)"/>
+    <wire from="(20,200)" to="(720,200)"/>
+    <wire from="(190,360)" to="(240,360)"/>
+    <wire from="(290,300)" to="(290,320)"/>
+    <wire from="(20,20)" to="(510,20)"/>
+    <wire from="(20,140)" to="(510,140)"/>
+    <wire from="(140,430)" to="(240,430)"/>
+    <wire from="(360,350)" to="(390,350)"/>
+    <wire from="(320,80)" to="(340,80)"/>
+    <wire from="(360,80)" to="(380,80)"/>
+    <wire from="(400,80)" to="(420,80)"/>
+    <wire from="(440,80)" to="(460,80)"/>
+    <wire from="(360,290)" to="(360,330)"/>
+    <wire from="(20,150)" to="(20,200)"/>
+    <wire from="(280,370)" to="(290,370)"/>
+    <wire from="(20,20)" to="(20,140)"/>
+    <wire from="(20,210)" to="(720,210)"/>
+    <wire from="(190,410)" to="(240,410)"/>
+    <wire from="(290,270)" to="(290,280)"/>
+    <wire from="(360,60)" to="(360,70)"/>
+    <wire from="(140,80)" to="(140,100)"/>
+    <wire from="(140,280)" to="(240,280)"/>
+    <wire from="(290,300)" to="(310,300)"/>
+    <wire from="(290,380)" to="(310,380)"/>
+    <wire from="(280,420)" to="(290,420)"/>
+    <wire from="(350,290)" to="(360,290)"/>
+    <wire from="(70,80)" to="(140,80)"/>
+    <wire from="(560,420)" to="(570,420)"/>
+    <wire from="(580,90)" to="(580,100)"/>
+    <wire from="(190,260)" to="(240,260)"/>
+    <wire from="(290,400)" to="(290,420)"/>
+    <wire from="(560,430)" to="(560,450)"/>
+    <wire from="(140,330)" to="(240,330)"/>
+    <wire from="(360,330)" to="(390,330)"/>
+    <wire from="(340,80)" to="(360,80)"/>
+    <wire from="(380,80)" to="(400,80)"/>
+    <wire from="(420,80)" to="(440,80)"/>
+    <wire from="(360,350)" to="(360,390)"/>
+    <wire from="(720,20)" to="(720,140)"/>
+    <wire from="(280,270)" to="(290,270)"/>
+    <wire from="(720,150)" to="(720,200)"/>
+    <wire from="(560,430)" to="(570,430)"/>
+    <wire from="(140,80)" to="(320,80)"/>
+    <wire from="(590,430)" to="(610,430)"/>
+    <wire from="(560,350)" to="(560,420)"/>
+    <wire from="(610,330)" to="(610,430)"/>
+    <wire from="(610,330)" to="(620,330)"/>
+    <wire from="(480,450)" to="(560,450)"/>
+    <wire from="(450,450)" to="(460,450)"/>
+    <wire from="(450,340)" to="(450,450)"/>
+    <wire from="(20,480)" to="(720,480)"/>
+    <wire from="(720,210)" to="(720,480)"/>
+    <wire from="(20,210)" to="(20,480)"/>
+    <wire from="(70,70)" to="(70,80)"/>
+    <wire from="(70,70)" to="(70,80)"/>
+    <comp lib="1" loc="(480,450)" name="NOT Gate"/>
+    <comp lib="7" loc="(309,167)" name="Text">
+      <a name="text" val="电路功能：实现8位数据位的奇校验编码，输入：8位数据；输出：9位校验码（数据位+校验位）"/>
+      <a name="font" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="0" loc="(140,380)" name="Tunnel">
+      <a name="label" val="D6"/>
+    </comp>
+    <comp lib="0" loc="(440,60)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="D2"/>
+    </comp>
+    <comp lib="0" loc="(190,310)" name="Tunnel">
+      <a name="label" val="D3"/>
+    </comp>
+    <comp lib="0" loc="(140,430)" name="Tunnel">
+      <a name="label" val="D8"/>
+    </comp>
+    <comp lib="0" loc="(580,100)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="width" val="9"/>
+      <a name="label" val="校验码"/>
+    </comp>
+    <comp lib="0" loc="(190,360)" name="Tunnel">
+      <a name="label" val="D5"/>
+    </comp>
+    <comp lib="0" loc="(420,80)" name="Splitter">
+      <a name="facing" val="south"/>
+      <a name="fanout" val="1"/>
+      <a name="incoming" val="8"/>
+      <a name="appear" val="center"/>
+      <a name="bit0" val="none"/>
+      <a name="bit1" val="none"/>
+      <a name="bit2" val="0"/>
+      <a name="bit3" val="none"/>
+      <a name="bit4" val="none"/>
+      <a name="bit5" val="none"/>
+      <a name="bit6" val="none"/>
+      <a name="bit7" val="none"/>
+    </comp>
+    <comp lib="7" loc="(672,128)" name="Text">
+      <a name="text" val="输出引脚区"/>
+      <a name="font" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="1" loc="(280,270)" name="XOR Gate"/>
+    <comp lib="7" loc="(516,189)" name="Text">
+      <a name="text" val="请在下方利用上方输入输出引脚的隧道信号构建电路，ctrl+d复制选择部件"/>
+    </comp>
+    <comp lib="1" loc="(350,390)" name="XOR Gate"/>
+    <comp lib="0" loc="(70,70)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="width" val="8"/>
+      <a name="tristate" val="false"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(360,60)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="D6"/>
+    </comp>
+    <comp lib="0" loc="(140,280)" name="Tunnel">
+      <a name="label" val="D2"/>
+    </comp>
+    <comp lib="0" loc="(340,100)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="D7"/>
+    </comp>
+    <comp lib="0" loc="(320,60)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="D8"/>
+    </comp>
+    <comp lib="0" loc="(380,80)" name="Splitter">
+      <a name="facing" val="south"/>
+      <a name="fanout" val="1"/>
+      <a name="incoming" val="8"/>
+      <a name="appear" val="center"/>
+      <a name="bit0" val="none"/>
+      <a name="bit1" val="none"/>
+      <a name="bit2" val="none"/>
+      <a name="bit3" val="none"/>
+      <a name="bit4" val="0"/>
+      <a name="bit5" val="none"/>
+      <a name="bit6" val="none"/>
+      <a name="bit7" val="none"/>
+    </comp>
+    <comp lib="0" loc="(460,100)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="D1"/>
+    </comp>
+    <comp lib="7" loc="(68,95)" name="Text">
+      <a name="text" val="原始数据"/>
+    </comp>
+    <comp lib="0" loc="(400,60)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="D4"/>
+    </comp>
+    <comp lib="0" loc="(320,80)" name="Splitter">
+      <a name="facing" val="north"/>
+      <a name="fanout" val="1"/>
+      <a name="incoming" val="8"/>
+      <a name="appear" val="center"/>
+      <a name="bit0" val="none"/>
+      <a name="bit1" val="none"/>
+      <a name="bit2" val="none"/>
+      <a name="bit3" val="none"/>
+      <a name="bit4" val="none"/>
+      <a name="bit5" val="none"/>
+      <a name="bit6" val="none"/>
+      <a name="bit7" val="0"/>
+    </comp>
+    <comp lib="1" loc="(280,320)" name="XOR Gate"/>
+    <comp lib="0" loc="(580,90)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="output" val="true"/>
+      <a name="width" val="9"/>
+      <a name="label" val="奇校验编码"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="7" loc="(66,127)" name="Text">
+      <a name="text" val="输入引脚区"/>
+      <a name="font" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="0" loc="(420,100)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="D3"/>
+    </comp>
+    <comp lib="0" loc="(380,100)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="D5"/>
+    </comp>
+    <comp lib="0" loc="(340,80)" name="Splitter">
+      <a name="facing" val="south"/>
+      <a name="fanout" val="1"/>
+      <a name="incoming" val="8"/>
+      <a name="appear" val="center"/>
+      <a name="bit0" val="none"/>
+      <a name="bit1" val="none"/>
+      <a name="bit2" val="none"/>
+      <a name="bit3" val="none"/>
+      <a name="bit4" val="none"/>
+      <a name="bit5" val="none"/>
+      <a name="bit6" val="0"/>
+      <a name="bit7" val="none"/>
+    </comp>
+    <comp lib="1" loc="(280,420)" name="XOR Gate"/>
+    <comp lib="0" loc="(620,330)" name="Tunnel">
+      <a name="facing" val="west"/>
+      <a name="width" val="9"/>
+      <a name="label" val="校验码"/>
+    </comp>
+    <comp lib="0" loc="(190,410)" name="Tunnel">
+      <a name="label" val="D7"/>
+    </comp>
+    <comp lib="1" loc="(430,340)" name="XOR Gate"/>
+    <comp lib="0" loc="(440,80)" name="Splitter">
+      <a name="facing" val="north"/>
+      <a name="fanout" val="1"/>
+      <a name="incoming" val="8"/>
+      <a name="appear" val="center"/>
+      <a name="bit0" val="none"/>
+      <a name="bit1" val="0"/>
+      <a name="bit2" val="none"/>
+      <a name="bit3" val="none"/>
+      <a name="bit4" val="none"/>
+      <a name="bit5" val="none"/>
+      <a name="bit6" val="none"/>
+      <a name="bit7" val="none"/>
+    </comp>
+    <comp lib="0" loc="(140,330)" name="Tunnel">
+      <a name="label" val="D4"/>
+    </comp>
+    <comp lib="0" loc="(190,260)" name="Tunnel">
+      <a name="label" val="D1"/>
+    </comp>
+    <comp lib="0" loc="(460,80)" name="Splitter">
+      <a name="facing" val="south"/>
+      <a name="fanout" val="1"/>
+      <a name="incoming" val="8"/>
+      <a name="appear" val="center"/>
+      <a name="bit1" val="none"/>
+      <a name="bit2" val="none"/>
+      <a name="bit3" val="none"/>
+      <a name="bit4" val="none"/>
+      <a name="bit5" val="none"/>
+      <a name="bit6" val="none"/>
+      <a name="bit7" val="none"/>
+    </comp>
+    <comp lib="0" loc="(400,80)" name="Splitter">
+      <a name="facing" val="north"/>
+      <a name="fanout" val="1"/>
+      <a name="incoming" val="8"/>
+      <a name="appear" val="center"/>
+      <a name="bit0" val="none"/>
+      <a name="bit1" val="none"/>
+      <a name="bit2" val="none"/>
+      <a name="bit3" val="0"/>
+      <a name="bit4" val="none"/>
+      <a name="bit5" val="none"/>
+      <a name="bit6" val="none"/>
+      <a name="bit7" val="none"/>
+    </comp>
+    <comp lib="1" loc="(280,370)" name="XOR Gate"/>
+    <comp lib="7" loc="(367,529)" name="Text">
+      <a name="text" val="8位奇校验编码电路"/>
+      <a name="font" val="SansSerif plain 24"/>
+    </comp>
+    <comp lib="0" loc="(140,100)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="width" val="8"/>
+      <a name="label" val="Data"/>
+    </comp>
+    <comp lib="0" loc="(360,80)" name="Splitter">
+      <a name="facing" val="north"/>
+      <a name="fanout" val="1"/>
+      <a name="incoming" val="8"/>
+      <a name="appear" val="center"/>
+      <a name="bit0" val="none"/>
+      <a name="bit1" val="none"/>
+      <a name="bit2" val="none"/>
+      <a name="bit3" val="none"/>
+      <a name="bit4" val="none"/>
+      <a name="bit5" val="0"/>
+      <a name="bit6" val="none"/>
+      <a name="bit7" val="none"/>
+    </comp>
+    <comp lib="1" loc="(350,290)" name="XOR Gate"/>
+    <comp lib="7" loc="(128,190)" name="Text">
+      <a name="text" val="请勿增改引脚，请勿修改子电路封装"/>
+    </comp>
+    <comp lib="0" loc="(590,430)" name="Splitter">
+      <a name="facing" val="west"/>
+      <a name="fanout" val="2"/>
+      <a name="incoming" val="9"/>
+      <a name="appear" val="center"/>
+      <a name="bit1" val="0"/>
+      <a name="bit2" val="0"/>
+      <a name="bit3" val="0"/>
+      <a name="bit4" val="0"/>
+      <a name="bit5" val="0"/>
+      <a name="bit6" val="0"/>
+      <a name="bit7" val="0"/>
+      <a name="bit8" val="1"/>
+    </comp>
+    <comp lib="0" loc="(560,350)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="width" val="8"/>
+      <a name="label" val="Data"/>
+    </comp>
+  </circuit>
+  <circuit name="9位奇校验码检错电路">
+    <a name="circuit" val="9位奇校验码检错电路"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="Dialog plain 12"/>
+    <a name="clabelcolor" val="#000000"/>
+    <wire from="(230,230)" to="(230,240)"/>
+    <wire from="(130,370)" to="(180,370)"/>
+    <wire from="(80,240)" to="(180,240)"/>
+    <wire from="(300,290)" to="(320,290)"/>
+    <wire from="(360,70)" to="(380,70)"/>
+    <wire from="(400,70)" to="(420,70)"/>
+    <wire from="(440,70)" to="(460,70)"/>
+    <wire from="(480,70)" to="(500,70)"/>
+    <wire from="(230,260)" to="(250,260)"/>
+    <wire from="(230,340)" to="(250,340)"/>
+    <wire from="(290,250)" to="(300,250)"/>
+    <wire from="(220,380)" to="(230,380)"/>
+    <wire from="(10,140)" to="(720,140)"/>
+    <wire from="(130,220)" to="(180,220)"/>
+    <wire from="(230,360)" to="(230,380)"/>
+    <wire from="(80,290)" to="(180,290)"/>
+    <wire from="(380,300)" to="(380,390)"/>
+    <wire from="(380,410)" to="(410,410)"/>
+    <wire from="(540,250)" to="(570,250)"/>
+    <wire from="(300,310)" to="(300,350)"/>
+    <wire from="(520,130)" to="(720,130)"/>
+    <wire from="(10,140)" to="(10,190)"/>
+    <wire from="(220,230)" to="(230,230)"/>
+    <wire from="(10,10)" to="(10,130)"/>
+    <wire from="(10,190)" to="(720,190)"/>
+    <wire from="(520,10)" to="(720,10)"/>
+    <wire from="(230,330)" to="(230,340)"/>
+    <wire from="(130,270)" to="(180,270)"/>
+    <wire from="(580,90)" to="(620,90)"/>
+    <wire from="(580,40)" to="(680,40)"/>
+    <wire from="(150,50)" to="(150,70)"/>
+    <wire from="(80,340)" to="(180,340)"/>
+    <wire from="(150,70)" to="(180,70)"/>
+    <wire from="(300,310)" to="(320,310)"/>
+    <wire from="(380,70)" to="(400,70)"/>
+    <wire from="(420,70)" to="(440,70)"/>
+    <wire from="(460,70)" to="(480,70)"/>
+    <wire from="(230,240)" to="(250,240)"/>
+    <wire from="(230,360)" to="(250,360)"/>
+    <wire from="(720,10)" to="(720,130)"/>
+    <wire from="(290,350)" to="(300,350)"/>
+    <wire from="(220,280)" to="(230,280)"/>
+    <wire from="(720,140)" to="(720,190)"/>
+    <wire from="(10,200)" to="(720,200)"/>
+    <wire from="(520,10)" to="(520,130)"/>
+    <wire from="(10,10)" to="(520,10)"/>
+    <wire from="(130,320)" to="(180,320)"/>
+    <wire from="(230,260)" to="(230,280)"/>
+    <wire from="(110,70)" to="(150,70)"/>
+    <wire from="(80,390)" to="(180,390)"/>
+    <wire from="(380,390)" to="(410,390)"/>
+    <wire from="(360,300)" to="(380,300)"/>
+    <wire from="(590,240)" to="(620,240)"/>
+    <wire from="(300,250)" to="(300,290)"/>
+    <wire from="(220,330)" to="(230,330)"/>
+    <wire from="(180,70)" to="(360,70)"/>
+    <wire from="(80,430)" to="(150,430)"/>
+    <wire from="(380,410)" to="(380,430)"/>
+    <wire from="(170,430)" to="(380,430)"/>
+    <wire from="(450,400)" to="(530,400)"/>
+    <wire from="(10,130)" to="(520,130)"/>
+    <wire from="(10,450)" to="(720,450)"/>
+    <wire from="(10,200)" to="(10,450)"/>
+    <wire from="(720,200)" to="(720,450)"/>
+    <comp lib="0" loc="(130,220)" name="Tunnel">
+      <a name="label" val="D1"/>
+    </comp>
+    <comp lib="7" loc="(115,181)" name="Text">
+      <a name="text" val="请勿增改引脚，请勿修改子电路封装"/>
+    </comp>
+    <comp lib="7" loc="(323,505)" name="Text">
+      <a name="text" val="9位奇校验检错电路"/>
+      <a name="font" val="SansSerif plain 24"/>
+    </comp>
+    <comp lib="0" loc="(80,340)" name="Tunnel">
+      <a name="label" val="D6"/>
+    </comp>
+    <comp lib="0" loc="(380,70)" name="Splitter">
+      <a name="facing" val="south"/>
+      <a name="fanout" val="1"/>
+      <a name="incoming" val="9"/>
+      <a name="appear" val="center"/>
+      <a name="bit0" val="none"/>
+      <a name="bit1" val="none"/>
+      <a name="bit2" val="none"/>
+      <a name="bit3" val="none"/>
+      <a name="bit4" val="none"/>
+      <a name="bit5" val="none"/>
+      <a name="bit6" val="0"/>
+      <a name="bit7" val="none"/>
+      <a name="bit8" val="none"/>
+    </comp>
+    <comp lib="0" loc="(180,70)" name="Splitter">
+      <a name="facing" val="south"/>
+      <a name="fanout" val="1"/>
+      <a name="incoming" val="9"/>
+      <a name="appear" val="center"/>
+      <a name="bit0" val="none"/>
+      <a name="bit1" val="none"/>
+      <a name="bit2" val="none"/>
+      <a name="bit3" val="none"/>
+      <a name="bit4" val="none"/>
+      <a name="bit5" val="none"/>
+      <a name="bit6" val="none"/>
+      <a name="bit7" val="none"/>
+      <a name="bit8" val="0"/>
+    </comp>
+    <comp lib="0" loc="(580,40)" name="Tunnel">
+      <a name="label" val="检错位"/>
+    </comp>
+    <comp lib="0" loc="(570,250)" name="Splitter">
+      <a name="fanout" val="2"/>
+      <a name="incoming" val="9"/>
+      <a name="appear" val="center"/>
+      <a name="bit1" val="0"/>
+      <a name="bit2" val="0"/>
+      <a name="bit3" val="0"/>
+      <a name="bit4" val="0"/>
+      <a name="bit5" val="0"/>
+      <a name="bit6" val="0"/>
+      <a name="bit7" val="0"/>
+      <a name="bit8" val="1"/>
+    </comp>
+    <comp lib="0" loc="(80,430)" name="Tunnel">
+      <a name="label" val="P1"/>
+    </comp>
+    <comp lib="1" loc="(170,430)" name="NOT Gate"/>
+    <comp lib="1" loc="(220,280)" name="XOR Gate"/>
+    <comp lib="0" loc="(680,40)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="检错位"/>
+    </comp>
+    <comp lib="0" loc="(400,50)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="D6"/>
+    </comp>
+    <comp lib="0" loc="(180,90)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="P1"/>
+    </comp>
+    <comp lib="0" loc="(620,240)" name="Tunnel">
+      <a name="facing" val="west"/>
+      <a name="width" val="8"/>
+      <a name="label" val="数据位"/>
+    </comp>
+    <comp lib="0" loc="(500,90)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="D1"/>
+    </comp>
+    <comp lib="0" loc="(400,70)" name="Splitter">
+      <a name="facing" val="north"/>
+      <a name="fanout" val="1"/>
+      <a name="incoming" val="9"/>
+      <a name="appear" val="center"/>
+      <a name="bit0" val="none"/>
+      <a name="bit1" val="none"/>
+      <a name="bit2" val="none"/>
+      <a name="bit3" val="none"/>
+      <a name="bit4" val="none"/>
+      <a name="bit5" val="0"/>
+      <a name="bit6" val="none"/>
+      <a name="bit7" val="none"/>
+      <a name="bit8" val="none"/>
+    </comp>
+    <comp lib="1" loc="(220,230)" name="XOR Gate"/>
+    <comp lib="7" loc="(567,119)" name="Text">
+      <a name="text" val="输出引脚区"/>
+      <a name="font" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="7" loc="(520,183)" name="Text">
+      <a name="text" val="请在下方利用上方输入输出引脚的隧道信号构建电路，ctrl+d复制选择部件"/>
+    </comp>
+    <comp lib="0" loc="(460,90)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="D3"/>
+    </comp>
+    <comp lib="0" loc="(130,370)" name="Tunnel">
+      <a name="label" val="D7"/>
+    </comp>
+    <comp lib="1" loc="(220,380)" name="XOR Gate"/>
+    <comp lib="1" loc="(220,330)" name="XOR Gate"/>
+    <comp lib="0" loc="(130,270)" name="Tunnel">
+      <a name="label" val="D3"/>
+    </comp>
+    <comp lib="0" loc="(420,70)" name="Splitter">
+      <a name="facing" val="south"/>
+      <a name="fanout" val="1"/>
+      <a name="incoming" val="9"/>
+      <a name="appear" val="center"/>
+      <a name="bit0" val="none"/>
+      <a name="bit1" val="none"/>
+      <a name="bit2" val="none"/>
+      <a name="bit3" val="none"/>
+      <a name="bit4" val="0"/>
+      <a name="bit5" val="none"/>
+      <a name="bit6" val="none"/>
+      <a name="bit7" val="none"/>
+      <a name="bit8" val="none"/>
+    </comp>
+    <comp lib="0" loc="(110,70)" name="Pin">
+      <a name="width" val="9"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="奇校验编码"/>
+    </comp>
+    <comp lib="0" loc="(360,50)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="D8"/>
+    </comp>
+    <comp lib="0" loc="(620,90)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="8"/>
+      <a name="label" val="数据位"/>
+    </comp>
+    <comp lib="1" loc="(360,300)" name="XOR Gate"/>
+    <comp lib="0" loc="(420,90)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="D5"/>
+    </comp>
+    <comp lib="0" loc="(580,90)" name="Tunnel">
+      <a name="width" val="8"/>
+      <a name="label" val="数据位"/>
+    </comp>
+    <comp lib="0" loc="(540,250)" name="Tunnel">
+      <a name="width" val="9"/>
+      <a name="label" val="奇校验码"/>
+    </comp>
+    <comp lib="0" loc="(80,290)" name="Tunnel">
+      <a name="label" val="D4"/>
+    </comp>
+    <comp lib="0" loc="(380,90)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="D7"/>
+    </comp>
+    <comp lib="1" loc="(450,400)" name="XOR Gate"/>
+    <comp lib="0" loc="(150,50)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="width" val="9"/>
+      <a name="label" val="奇校验码"/>
+    </comp>
+    <comp lib="7" loc="(62,118)" name="Text">
+      <a name="text" val="输入引脚区"/>
+      <a name="font" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="1" loc="(290,350)" name="XOR Gate"/>
+    <comp lib="0" loc="(440,70)" name="Splitter">
+      <a name="facing" val="north"/>
+      <a name="fanout" val="1"/>
+      <a name="incoming" val="9"/>
+      <a name="appear" val="center"/>
+      <a name="bit0" val="none"/>
+      <a name="bit1" val="none"/>
+      <a name="bit2" val="none"/>
+      <a name="bit3" val="0"/>
+      <a name="bit4" val="none"/>
+      <a name="bit5" val="none"/>
+      <a name="bit6" val="none"/>
+      <a name="bit7" val="none"/>
+      <a name="bit8" val="none"/>
+    </comp>
+    <comp lib="1" loc="(290,250)" name="XOR Gate"/>
+    <comp lib="0" loc="(80,390)" name="Tunnel">
+      <a name="label" val="D8"/>
+    </comp>
+    <comp lib="0" loc="(480,50)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="D2"/>
+    </comp>
+    <comp lib="0" loc="(530,400)" name="Tunnel">
+      <a name="facing" val="west"/>
+      <a name="label" val="检错位"/>
+    </comp>
+    <comp lib="0" loc="(460,70)" name="Splitter">
+      <a name="facing" val="south"/>
+      <a name="fanout" val="1"/>
+      <a name="incoming" val="9"/>
+      <a name="appear" val="center"/>
+      <a name="bit0" val="none"/>
+      <a name="bit1" val="none"/>
+      <a name="bit2" val="0"/>
+      <a name="bit3" val="none"/>
+      <a name="bit4" val="none"/>
+      <a name="bit5" val="none"/>
+      <a name="bit6" val="none"/>
+      <a name="bit7" val="none"/>
+      <a name="bit8" val="none"/>
+    </comp>
+    <comp lib="0" loc="(500,70)" name="Splitter">
+      <a name="facing" val="south"/>
+      <a name="fanout" val="1"/>
+      <a name="incoming" val="9"/>
+      <a name="appear" val="center"/>
+      <a name="bit1" val="none"/>
+      <a name="bit2" val="none"/>
+      <a name="bit3" val="none"/>
+      <a name="bit4" val="none"/>
+      <a name="bit5" val="none"/>
+      <a name="bit6" val="none"/>
+      <a name="bit7" val="none"/>
+      <a name="bit8" val="none"/>
+    </comp>
+    <comp lib="7" loc="(300,157)" name="Text">
+      <a name="text" val="电路功能：实现9位奇校验编码的检错以及数据提取。输入：9位校验码；输出：检错位、数据位"/>
+      <a name="font" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="0" loc="(480,70)" name="Splitter">
+      <a name="facing" val="north"/>
+      <a name="fanout" val="1"/>
+      <a name="incoming" val="9"/>
+      <a name="appear" val="center"/>
+      <a name="bit0" val="none"/>
+      <a name="bit1" val="0"/>
+      <a name="bit2" val="none"/>
+      <a name="bit3" val="none"/>
+      <a name="bit4" val="none"/>
+      <a name="bit5" val="none"/>
+      <a name="bit6" val="none"/>
+      <a name="bit7" val="none"/>
+      <a name="bit8" val="none"/>
+    </comp>
+    <comp lib="0" loc="(130,320)" name="Tunnel">
+      <a name="label" val="D5"/>
+    </comp>
+    <comp lib="0" loc="(440,50)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="D4"/>
+    </comp>
+    <comp lib="0" loc="(80,240)" name="Tunnel">
+      <a name="label" val="D2"/>
+    </comp>
+    <comp lib="0" loc="(360,70)" name="Splitter">
+      <a name="facing" val="north"/>
+      <a name="fanout" val="1"/>
+      <a name="incoming" val="9"/>
+      <a name="appear" val="center"/>
+      <a name="bit0" val="none"/>
+      <a name="bit1" val="none"/>
+      <a name="bit2" val="none"/>
+      <a name="bit3" val="none"/>
+      <a name="bit4" val="none"/>
+      <a name="bit5" val="none"/>
+      <a name="bit6" val="none"/>
+      <a name="bit7" val="0"/>
+      <a name="bit8" val="none"/>
+    </comp>
+  </circuit>
+</project>
