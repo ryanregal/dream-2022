@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.TextController">
+   <top>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="需要分析的内容：" BorderPane.alignment="CENTER_LEFT">
+         <BorderPane.margin>
+            <Insets top="10.0" />
+         </BorderPane.margin>
+      </Text>
+   </top>
+   <center>
+      <TextArea fx:id="inputTextArea" maxHeight="-Infinity" prefHeight="140.0" prefWidth="620.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets top="-200.0" />
+         </BorderPane.margin>
+      </TextArea>
+   </center>
+   <bottom>
+      <VBox prefHeight="379.0" prefWidth="620.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="分析统计结果：">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Text>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <RadioButton fx:id="differentCountButton" mnemonicParsing="false" onAction="#differentCountButtonSelected" text="不同单词个数（不区分大小写）" />
+                  <RadioButton fx:id="allCountButton" mnemonicParsing="false" onAction="#allCountButtonSelected" text="总单词数" />
+                  <RadioButton fx:id="showAllButton" mnemonicParsing="false" onAction="#showAllButtonSelected" text="按首字母分组显示所有单词及出现次数" />
+               </children>
+            </HBox>
+            <RadioButton fx:id="showMostButton" mnemonicParsing="false" onAction="#showMostButtonSelected" text="频率最高20个单词及其次数（按出现次数排序）">
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </RadioButton>
+            <TextArea fx:id="showTextArea" prefHeight="294.0" prefWidth="620.0">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </TextArea>
+            <Button fx:id="saveButton" mnemonicParsing="false" onAction="#saveButtonClick" text="保存统计分析结果">
+               <VBox.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+         <BorderPane.margin>
+            <Insets top="-200.0" />
+         </BorderPane.margin>
+      </VBox>
+   </bottom>
+   <padding>
+      <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+   </padding>
+</BorderPane>
