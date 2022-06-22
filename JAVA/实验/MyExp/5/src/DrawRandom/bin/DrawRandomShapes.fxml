@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--引入JavaFX工具相关的类-->
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/11.0.1" 
+xmlns:fx="http://javafx.com/fxml/1" fx:controller="DrawRandomShapesController">
+   <top>
+      <ToolBar prefHeight="40.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+        <items>
+             <Label text="x1" />
+             <TextField fx:id="xone" maxWidth="-Infinity" prefWidth="100.0" />
+             <Label text="y1" />
+            <TextField fx:id="yone" maxWidth="-Infinity" prefWidth="100.0" />
+             <Label text="x2" />
+             <TextField fx:id="xtwo" maxWidth="-Infinity" prefWidth="100.0" />
+             <Label text="y2" />
+            <TextField fx:id="ytwo" maxWidth="-Infinity" prefWidth="100.0" />  
+        </items>
+        <Button mnemonicParsing="false" onAction="#drawShapesButtonPressed" text="OK" />
+      </ToolBar>
+   </top>
+   <center>
+      <Canvas fx:id="canvas" height="300.0" width="300.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>
