@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="387.0" prefWidth="594.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lab11_3.studentInformationController">
+   <center>
+      <VBox alignment="CENTER" maxHeight="200.0" maxWidth="500.0" prefHeight="200.0" prefWidth="500.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextArea fx:id="showTextArea" editable="false" maxWidth="500.0" prefHeight="199.0" prefWidth="500.0" promptText="Show Information Here">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </TextArea>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <BorderPane.margin>
+            <Insets bottom="-0.0" left="-60.0" right="-60.0" top="-100.0" />
+         </BorderPane.margin>
+      </VBox>
+   </center>
+   <bottom>
+      <VBox prefHeight="50.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="5.0" prefWidth="583.0" spacing="20.0">
+               <children>
+                  <Button fx:id="addInformationButton" mnemonicParsing="false" onAction="#addInformationButtonPressed" text="新增">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="deleteInformationButton" mnemonicParsing="false" onAction="#deleteInformationButtonPressed" text="删除">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="modifyInformationButton" mnemonicParsing="false" onAction="#modifyInformationButtonPressed" text="修改">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="searchInformationButton" mnemonicParsing="false" onAction="#searchInformationButtonPressed" text="查询">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="displayInformationButton" mnemonicParsing="false" onAction="#displayInformationButtonPressed" text="显示" />
+               </children>
+               <padding>
+                  <Insets top="-140.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="lastInformationButton" mnemonicParsing="false" onAction="#lastInformationButtonPressed" text="上一条">
+                     <HBox.margin>
+                        <Insets right="50.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="nextInformationButton" mnemonicParsing="false" onAction="#nextInformationButtonPressed" text="下一条" />
+               </children>
+               <VBox.margin>
+                  <Insets top="-60.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </bottom>
+</BorderPane>

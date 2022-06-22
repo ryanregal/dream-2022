@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<students>
+    <student>
+        <studentEmail>reginamills@gmail.com</studentEmail>
+        <studentName>Regina</studentName>
+        <studentNumber>001</studentNumber>
+        <studentPhoneNumber>518100</studentPhoneNumber>
+    </student>
+    <student>
+        <studentEmail>emmaswan@gmail.com</studentEmail>
+        <studentName>Emma</studentName>
+        <studentNumber>002</studentNumber>
+        <studentPhoneNumber>518123</studentPhoneNumber>
+    </student>
+    <student>
+        <studentEmail>snowwhite@gmail.com</studentEmail>
+        <studentName>Snow</studentName>
+        <studentNumber>003</studentNumber>
+        <studentPhoneNumber>518103</studentPhoneNumber>
+    </student>
+    <student>
+        <studentEmail>zelenamills@gmail.com</studentEmail>
+        <studentName>zelena</studentName>
+        <studentNumber>004</studentNumber>
+        <studentPhoneNumber>518141</studentPhoneNumber>
+    </student>
+</students>
