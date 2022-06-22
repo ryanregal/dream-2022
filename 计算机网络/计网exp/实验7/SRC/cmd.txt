@@ -1,0 +1,4 @@
+ifconfig -a
+cd /home/icebear/下载/
+gcc mainprogram.c -pthread -Wno-unused-result -g -std=gnu99 -Wall -o proxy.exe
+./proxy.exe
